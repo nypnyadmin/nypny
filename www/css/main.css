@@ -1,0 +1,214 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1.618em;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    padding: 50px 0;
+    font-size: 19px;
+    font-family: 'Josefin Sans';
+    font-weight: 300
+}
+
+article, .content {
+    margin: 0 auto;
+    width: 800px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Josefin Sans';
+    font-size: 4.26em;
+    line-height: 0.928em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p.intro {
+    font-family: 'Josefin Sans';
+    font-size: 1.268em;
+    border-top: 1px;
+    border-bottom: 1px;
+    padding: 1.154em;
+    text-align: center;
+    border-style: solid;
+    line-height: 1.5em;
+    margin: 1.038em 0px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-size: 0.9em;
+    line-height: 1.421em;
+    color: rgba(51, 51, 51, 0.80);
+    margin: 0px 0px 1.421em 0px;
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    -webkit-column-count: 0;
+    -o-column-count: 0;
+    -moz-column-count: 0;
+    -ms-column-count: 0;
+    column-count: 0;
+    -webkit-column-rule-style: solid;
+    -o-column-rule-style: solid;
+    -moz-column-rule-style: solid;
+    -ms-column-rule-style: solid;
+    column-rule-style: solid;
+    -webkit-column-break-before: always;
+    -o-column-break-before: always;
+    -moz-column-break-before: always;
+    -ms-column-break-before: always;
+    column-break-before: always;
+    -webkit-column-break-inside: avoid-page;
+    -o-column-break-inside: avoid-page;
+    -moz-column-break-inside: avoid-page;
+    -ms-column-break-inside: avoid-page;
+    column-break-inside: avoid-page;
+}
+
+h2 {
+    font-size: 1.526em;
+    font-family: 'Josefin Sans';
+    line-height: 0.931em;
+    margin: 0px 0px 0.931em 0px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p.pullquote {
+    padding-left: 10px;
+    border-style: solid;
+    border-left-width: 3px;
+    color: rgba(51, 51, 51, 1.00);
+    font-size: 0.9em;
+    line-height: 1.421em;
+    margin: 0px 0px 1.421em 0px;
+}
+
+p.author {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 27px;
+}
+
+p.tags {
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    article, .content {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 2em;
+    }
+}
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 90%;
+    }
+
+    h1 {
+        font-size: 3.75em;
+        line-height: 0.929em;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    p.pullquote {
+        font-size: 16px;
+    }
+}
+
+.tooltip-parent{
+}
+
+.tooltip {
+    position: absolute;
+    padding:1px 7px;
+    font-size: .8em;
+    z-index: 1000;
+    background-color: rgba(235, 235, 235, 1);
+    color: #000;
+    text-decoration: none;
+}
+
+.title h1{
+    text-transform: none;
+    font-size: 3em;
+}
+
+.title h3{
+    text-align: center;
+}
+.quote {
+    text-align: center;
+    color: rgba(0,0,0,.5);
+}
+.quote .text {
+    font-style: italic;
+}
+
+.section {
+    margin-top: 20px;
+}
+.content h3{
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.totoro-container{
+    position: fixed;
+    left: 70%;
+    top: 85%;
+}

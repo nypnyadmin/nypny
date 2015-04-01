@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NYPNY | Nepalese Young Professionals in New York</title>
+    <meta name="description" content="NYPNY, Nepalese Young Professionals in New York">
+    <meta name="author" content="Ashwin Hamal">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="icons/favicon-96x96.png">
+
+    <script src="js/modernizr-2.8.3.min.js"></script>
+
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="title">
+      <h1>NYPNY</h1>
+      <h3>Nepalese Young Professionals in New York</h3>
+      <h3><img src="img/banner.png"></h3>
+    </div>
+    <div class="content">
+      <div class="quote" style="opacity:0">
+        &lsquo;<span class="text">We know what we are, but know not what we may be.</span>&rsquo; - <span class="author">William Shakespaere</span>
+      </div>
+
+      <div class="section">
+        <p>
+          Hello There,
+        </p>
+        <p>
+          Welcome to our website.
+        </p>
+        <p>
+          NYPNY (Nepalese Young Professionals in New York) is a group for Nepalese young professionals in New York and Tri-state area. We organize events, assemble, interact, and build a strong network of connections among us.
+        </p>
+        <p>
+          While we work on building a robust website, why don't you join and find more about our events on our <a href="https://www.facebook.com/groups/nypny/">Facebook Page</a>, or join discussions on our <a href="http://discuss.nypny.com/">Discussion Forum</a>.
+        </p>
+        <p>
+        Thanks,<br>
+        NYPNY Team
+        </p>
+      </div>
+
+      <hr>
+      <h3>Contacts</h3>
+      <p>contact@nypny.com</p> 
+      <h4>For Volunteering requests,</h4>
+      <p>Please send an email to wg@nypny.com and state how you can help.</p>
+      <h4>To subscribe to the working group,</h4>
+      <p>Please send an email to wg@nypny.com with the subject line “subscribe”</p>
+      <h4>To unsubscribe from the working group,</h4>
+      <p>Please send an email to wg@nypny.com with the subject line “unsubscribe”</p>
+
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      //Quotes
+      $.ajax({
+        url: '/data/quotes.json',
+        dataType: 'json',
+        success: function(json){
+          var q = json[Math.floor(Math.random() * json.length)];
+          $('.quote .text').html(q.quote);
+          $('.quote .author').html(q.author);
+          $('.quote').css('opacity', 1);
+        }
+      });
+    </script>
+  </body>
+</html>
