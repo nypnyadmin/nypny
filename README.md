@@ -1,4 +1,4 @@
-NYPMY
+NYPNY
 =====
 
-NYPNY Open-Source web serving designed for Nepalese Young Professionals in New York
+source for www.nypny.com
