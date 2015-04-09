@@ -1,4 +1,6 @@
 NYPNY
 =====
 
-source for www.nypny.com
+opensourcing www.nypny.com
+
+Contact us at contact@nypny.com
