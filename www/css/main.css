@@ -212,3 +212,28 @@ p.tags {
     left: 70%;
     top: 85%;
 }
+
+.emergency {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.emergency h3 {
+    color: red;
+    text-align: center;
+}
+
+.donate.button {
+  padding: 10px 22px;
+  display: inline-block;
+  color: white;
+  background: rgb(205, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.text-center {
+    text-align: center;
+}
