@@ -218,7 +218,7 @@ p.tags {
 }
 
 .emergency {
-    border: 1px solid black;
+    
     padding: 20px;
     margin: 20px 0;
 }
@@ -231,22 +231,34 @@ p.tags {
     font-size: 1.1em;
 }
 .emergency h3{
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
+.button {
+    padding: 10px 22px;
+    display: inline-block;
+    color: white;
+    background: rgb(205, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
 
 .donate.button {
-  padding: 10px 22px;
-  display: inline-block;
-  color: white;
-  background: rgb(205, 0, 0);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2em;
+    background: rgb(205, 0, 0);
+}
+
+.template.button {
+    background: rgb(47, 111, 197);
 }
 
 .text-center {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .banner {
@@ -257,4 +269,19 @@ p.tags {
 @media screen and (max-width: 480px) {
     .banner {
     }
+}
+
+.tweets {
+    text-align: center;
+    margin-top: 30px;
+}
+.instagram {
+    text-align: center;
+    margin: 30px;
+}
+
+.raised {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
 }
