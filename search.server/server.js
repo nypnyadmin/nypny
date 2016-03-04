@@ -23,7 +23,7 @@ function createOrUpdateIndex(snap) {
       name: snapVal.name,
       email: snapVal.email,
       address: snapVal.address,
-      skills: snapVal.address,
+      skills: snapVal.skills,
       title: snapVal.title,
       bio: snapVal.bio
     }
