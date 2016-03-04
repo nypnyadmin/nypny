@@ -1,0 +1,396 @@
+html, body {
+}
+
+.spin {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 3s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.nypny-nav {
+    color: #fff;
+    padding: 25px 15px;
+    position: fixed;
+    width: 100%;
+    transition: all .3s cubic-bezier(0, 0, 0.15, 0.97);
+    z-index: 10;
+}
+.nypny-nav.dark {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 12px;
+    border-bottom: 2px solid black;
+}
+.nypny-nav .left-nav {
+    float: left;
+}
+.nypny-nav .left-nav .item {
+    display: inline-block;
+    padding: 9px 10px;
+    margin: 2px 4px;
+    font-weight: bold;
+    font-size: .9em;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: #000 1px 1px 1px;
+}
+.nypny-nav .right-nav {
+    float: right;
+    text-shadow: #000 1px 1px 1px;
+}
+.nypny-nav:not(.dark) {
+    font-weight: bold;
+}
+
+.nypny-nav .login-button {
+    padding: 11px 15px;
+    background: rgba(23, 105, 185, 0.79);
+    color: #ECECEC;
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: .9em;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+.nypny-nav .right-nav .greet{
+    padding: 10px 4px;
+    display: inline-block;
+}
+
+.nypny-nav .right-nav .logout-button,
+.nypny-nav .right-nav .profile-button {
+    padding: 10px 6px 10px 2px;
+    margin: 3px 6px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    /* vertical-align: middle; */
+    font-weight: bold;
+    /* font-size: 1.1em; */
+    outline: none;
+}
+
+
+
+section.home {
+    background: url('../img/bg/1.jpg');
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 110px 0 0 0;
+    background-attachment: fixed;
+    position: relative;
+}
+/* section.home:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,1);
+} */
+section.home .button {
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.79);
+    text-decoration: none;
+    margin: 20px 0 70px 0;
+    display: inline-block;
+    font-weight: bold;
+    color: #000000;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+section.home img.logo {
+    width: 400px;
+}
+
+
+
+section.about {
+    padding: 20px 0 20px 0;
+    background: rgb(245, 245, 245);
+    max-width: 980px;
+    margin: 20px auto 0 auto;
+    color: #4A4A4A;
+}
+section.about .head {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+section.about > .description{
+    text-align: center;
+    max-width: 552px;
+    margin: auto;
+    padding: 20px 0px;
+    font-size: 0.9em;
+}
+section.about .objectives {
+    text-align: center;
+}
+section.about .objective {
+    display: inline-block;
+    width: 320px;
+    vertical-align: top;
+    margin: 0;
+    padding: 10px;
+    /* height: 244px; */
+}
+section.about .objective .icon {
+    height: 100px;
+    width: 120px;
+    padding: 0;
+    border-radius: 100px;
+    /* background: rgba(0, 0, 0, 0.13); */
+    position: relative;
+    display: inline-block;
+    /* margin-bottom: 11px; */
+}
+section.about .objective .icon img{
+    width: 80px;
+    top: 50%;
+    /* left: 50%; */
+    position: relative;
+    transform: translateY(-50%);
+}
+
+section.about .objective .caption {
+    font-weight: bold;
+    margin-bottom: 8px;
+    /* text-decoration: underline; */
+    text-transform: uppercase;
+}
+section.about .objective .text {
+    font-size: 0.8em;
+    /* color: #858585; */
+}
+
+
+section.directory {
+    padding: 70px 0 40px 0;
+    background-color: #D4D4D4;
+    /* font-weight: bold; */
+}
+section.directory>.members-container>.title {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #444;
+}
+section.directory .member-container {
+    display: inline-block;
+}
+section.directory .members {
+    padding: 0 20px;
+    text-align: center;
+    min-height: 400px;
+}
+section.directory .members .spinner {
+    padding: 80px 0;
+    color: #4083C4;
+}
+section.directory .member {
+    width: 340px;
+    margin: 5px;
+    display: inline-block;
+    vertical-align: top;
+    /* height: 420px; */
+}
+section.directory .member .picture {
+    width: 140px;
+    height: 140px;
+    background-size: cover;
+    /* border-radius: 100px; */
+    background-position: center center;
+    margin: auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+section.directory .member .picture img {
+    width: 100%;
+    position: absolute;
+}
+section.directory .member .texts hr {
+    margin: 10px 0;
+}
+section.directory .member .texts {
+    background-color: #fff;
+    font-size: 0.9em;
+    text-align: left;
+    padding: 15px;
+    box-shadow: 2px 2px 8px #000;
+}
+section.directory .member .name {font-size: 1.1em;font-weight: bold;}
+
+section.directory .member .title {
+}
+section.directory .member .skills {font-weight: bold;font-size: .9em;margin-bottom: 9px;}
+section.directory .member .email {font-weight: bold;}
+section.directory .member .phone {font-weight: bold;}
+section.directory .member .address {
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+section.directory .member .contact-icon {
+    margin-right: 8px;
+    font-size: 1.3em;
+    width: 18px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+section.directory .member .link {
+}
+section.directory .member .linkedin {
+    background: #1B86BC;
+}
+section.directory .member .bio {margin-bottom: 10px;font-size: .8em;}
+section.directory .member .locked { height: 30px; }
+section.directory .member .locked .fa-lock{
+    font-size: 2em;
+    margin: 5px 15px 5px 5px;
+    color: #B60000;
+    vertical-align: middle;
+}
+
+
+section.social {
+    padding: 40px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
+section.social a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+section.social .fa {
+    padding: 6px;
+    display: inline-block;
+    border-radius: 18px;
+    width: 26px;
+    color: white;
+}
+section.social .fa.fa-facebook {
+    background-color: #3A5795;
+}
+section.social .fa.fa-tumblr {
+    background-color: #35465C;
+}
+section.social .fa.fa-twitter {
+    background-color: #2CAAE1;
+}
+
+
+
+section.contact-us .title{
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: #444;
+}
+section.contact-us {
+    padding: 60px 40px 40px 40px;
+    background: url('../img/bg/light.png') #D4D4D4;
+}
+section.contact-us textarea {
+    height: 150px;
+}
+
+section.contact-us .form-submitted {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    margin: 60px 0 60px 0;
+}
+
+section.footer {
+    padding: 75px 0;
+    background-color: #333;
+    text-align: center;
+    color: #eee;
+    font-size: 0.9em
+}
+section.footer .volunteer {
+   margin-bottom: 36px;
+   font-size: 1em;
+   /* font-family: 'Lato'; */
+}
+section.footer .copyright {
+    font-size: .9em;
+    color: #999;
+}
+
+
+.login-modal .btn.btn-facebook:active,
+.login-modal .btn.btn-facebook {
+    background-color: #3A5795;
+}
+.login-modal .btn-facebook:hover {
+    background-color: #334D83;
+}
+
+.circled-icon {
+    display: inline-block;
+    width: 28px;
+    padding: 8px;
+    background: #000;
+    border-radius: 20px;
+    color: white;
+    margin: 2px 3px;
+}
+.circled-icon:hover {
+    color: white;
+}
+
+.alert.nypny-alert {
+    position: fixed;
+    z-index: 2000;
+    width: 90%;
+    top: 41px;
+    max-width: 400px;
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    /* transition: all .3s cubic-bezier(0, 0, 0.15, 0.97); */
+    pointer-events: none;
+}
+
+
+.profile-picture-uploader {
+    margin-bottom: 15px;
+}

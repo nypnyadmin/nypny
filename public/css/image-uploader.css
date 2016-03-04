@@ -1,0 +1,85 @@
+.image-uploader {
+    position: relative;
+    text-align: center;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.image-uploader .overlay {
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.image-uploader .overlay.shadowed {
+    background-color: rgba(0,0,0,.5);
+}
+
+.image-uploader .overlay .middle {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-uploader .upload input[type='file'] {
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+}
+
+.image-uploader div.loading-image{
+    background-image: url("./loader.gif");
+    background-repeat: no-repeat;
+    width: 43px; /*or your image's width*/
+    height: 11px; /*or your image's height*/
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+/* Unsupported browser overlay */
+.image-uploader .unsupported {
+    display: none;
+    color: white;
+}
+.image-uploader.no-support .unsupported {
+    display: block;
+}
+
+/* Upload button overlay */
+.image-uploader .upload {
+    display: none;
+}
+.image-uploader:not(.confirming):not(.errored):not(.loading):not(.no-support):hover .upload {
+    display: block;
+}
+
+/* Confirm dialog overlay */
+.image-uploader .confirm-dialog {
+    display: none;
+}
+.image-uploader.confirming .confirm-dialog {
+    display: block;
+}
+
+/* Error overlay */
+.image-uploader .errored {
+    display: none;
+    color: white;
+}
+.image-uploader.errored .errored {
+    display: block;
+}
+
+/* Loader overlay */
+.image-uploader .loader {
+    display: none;
+    color: white;
+}
+.image-uploader.loading .loader {
+    display: block;
+}
