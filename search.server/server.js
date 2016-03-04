@@ -3,7 +3,7 @@ var elasticsearch = require('elasticsearch');
 var fb = new Firebase('nypny.firebaseio.com');
 var fbUser = fb.child('users');
 
-var client = new elasticsearch.Client({ host: 'localhost:920' });
+var client = new elasticsearch.Client({ host: 'localhost:9200' });
 var indexName = 'nypny';
 var type = 'document';
 
