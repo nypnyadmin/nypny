@@ -327,6 +327,8 @@ function searchMembers(q) {
        for (var i in val) {
          fetchAndLoadSearchMember(val[i]);
        }
+    } else {
+      searchMembersEl.html('No results containing all your search terms were found.');      
     }
   });
 }
@@ -343,7 +345,7 @@ var onEnterSearchQuery = function(q) {
     searchMembersContainer.addClass('hidden');
   }
 }
-var onEnterSearchQueryDebounce = _.debounce(onEnterSearchQuery, 400);
+var onEnterSearchQueryDebounce = _.debounce(onEnterSearchQuery, 500);
 $('#member-filter').on('keyup', function(evt) {
   onEnterSearchQueryDebounce( $(evt.currentTarget).val() );
 });
