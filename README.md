@@ -1,9 +1,9 @@
 NYPNY
 =====
 
-Source code for: www.nypny.com
+Source code for: https://www.nypny.com
 
-Built for firebase.
+Built for Firebase https://www.firebase.com/
 
 Author: Ashwin Hamal, ashes09@gmail.com
 
