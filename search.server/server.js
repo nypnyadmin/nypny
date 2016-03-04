@@ -3,7 +3,7 @@ var elasticsearch = require('elasticsearch');
 var fb = new Firebase('nypny.firebaseio.com');
 var fbUser = fb.child('users');
 
-var client = new elasticsearch.Client({ host: 'localhost:9200' });
+var client = new elasticsearch.Client({ host: 'localhost:920' });
 var indexName = 'nypny';
 var type = 'document';
 
@@ -61,9 +61,11 @@ function processSearchRequest(snap) {
     size: 100,
     body: { query: { query_string: { query: snap.val().query } } }
   }, function(error, result) {
-    if (result.error) {
+    if (error) {
+      if (error) console.error(error);
+    } else if (result && result.error) {
       fbSearchResponse.child(snap.key()).set({ error: result.error.reason });
-    } else {
+    } else if (result) {
       var ids = [];
       result.hits.hits.forEach(function(hit){ ids.push(hit._id); });
       fbSearchResponse.child( snap.key() ).set( ids );
