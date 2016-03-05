@@ -305,8 +305,7 @@ section.directory .member:hover .unlocked {
 
 section.directory .member .locked {
 	text-align: center;
-	font-size: 1.1em;
-	padding: 80px 40px;
+	padding: 20px 40px;
 }
 section.directory .member .locked .fa-lock{
     font-size: 2em;
@@ -405,7 +404,7 @@ section.footer .copyright {
     background: #000;
     border-radius: 20px;
     color: white;
-    margin: 2px 0px 2px 6px;
+    margin: 2px 0px 2px 2px;
 }
 .circled-icon:hover {
     color: white;
