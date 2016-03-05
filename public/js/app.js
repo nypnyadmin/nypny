@@ -323,11 +323,11 @@ function searchMembers(q) {
     snap.ref().off('value', handleResponse); // stop listening
     snap.ref().remove(); // clear the queue
 
-    var ids = snap.val().ids;
-    if (!ids) {
+    if (snap.val().total === 0) {
       searchMembersEl.html('No results containing all your search terms were found.');      
       return;
     }
+    var ids = snap.val().ids;
     searchMembersEl.html('');
     for (var i in ids) {
       fetchAndLoadSearchMember(ids[i]);
