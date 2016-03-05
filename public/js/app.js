@@ -289,7 +289,7 @@ var removeRecentUser = function(snap) {
   recentMembersEl.find('[data-user="' + snap.key() + '"]').remove();
 }
 
-var recentMembersRef = usersRef.limitToFirst(10);
+var recentMembersRef = usersRef.limitToLast(12);
 var refreshRef = function() {
   var r = recentMembersRef;
   r.off('child_added', createOrUpdateRecentMember);
@@ -318,17 +318,19 @@ function searchMembers(q) {
   var reqRef = searchRef.child('request').push({ 'query': '*' + q + '*' });
   var respRef = searchRef.child( 'response/' + reqRef.key() )
   respRef.on('value', function handleResponse(snap) {
-    searchMembersEl.html('');
+    if( snap.val() === null ) return; // wait for data
 
-    if( snap.val() !== null ) {     // wait for data
-       snap.ref().off('value', handleResponse); // stop listening
-       snap.ref().remove();         // clear the queue
-       var val = snap.val();
-       for (var i in val) {
-         fetchAndLoadSearchMember(val[i]);
-       }
-    } else {
+    snap.ref().off('value', handleResponse); // stop listening
+    snap.ref().remove(); // clear the queue
+
+    var ids = snap.val().ids;
+    if (!ids) {
       searchMembersEl.html('No results containing all your search terms were found.');      
+      return;
+    }
+    searchMembersEl.html('');
+    for (var i in ids) {
+      fetchAndLoadSearchMember(ids[i]);
     }
   });
 }

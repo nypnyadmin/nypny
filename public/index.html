@@ -109,13 +109,21 @@
             <% } %>
             <% if (authenticated) { %>
           </div>
-          <div class="unlocked hover-cover">
+          <div class="unlocked hover-cover arrow_box">
             <% if (user.address) { %>
             <div class="address">
               <i class="fa fa-map-marker contact-icon"></i>
               <span><%- user.address %></span>
             </div>
             <% } %>
+
+            <% if (user.url) { %>
+              <a class="link circled-icon pull-right" target="_blank" href="<%= user.url.substr(0, 4) == 'http' ? '' : 'http://' %><%- user.url %>"><i class="fa-link fa"></i></a>
+            <% } %>
+            <% if (user.linkedin) { %>
+              <a class="linkedin circled-icon pull-right" target="_blank" href="<%= user.url.substr(0, 4) == 'http' ? '' : 'http://' %><%- user.linkedin %>"><i class="fa-linkedin fa"></i></a>
+            <% } %>
+
             <% if (user.email) { %>
             <div class="email">
               <i class="fa fa-envelope-o contact-icon"></i>
@@ -128,21 +136,14 @@
               <span><%- user.phone %></span>
             </div>
             <% } %>
-
-            <% if (user.url) { %>
-              <a class="link circled-icon pull-right" target="_blank" href="<%= user.url.substr(0, 4) == 'http' ? '' : 'http://' %><%- user.url %>"><i class="fa-link fa"></i></a>
-            <% } %>
-            <% if (user.linkedin) { %>
-              <a class="linkedin circled-icon pull-right" target="_blank" href="<%= user.url.substr(0, 4) == 'http' ? '' : 'http://' %><%- user.linkedin %>"><i class="fa-linkedin fa"></i></a>
-            <% } %>
-            <hr>
             <div class="clearfix"></div>
             <% if (user.skills) { %>
+            <hr>
             <div class="skills"><%- user.skills %></div>
             <% } %>
 
             <% if (user.bio) { %>
-              <div class="bio arrow_box"><%- user.bio %></div>
+              <div class="bio"><%- user.bio %></div>
             <% } %>
           </div>
           <% } else { %>

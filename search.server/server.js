@@ -68,7 +68,7 @@ function processSearchRequest(snap) {
     } else if (result) {
       var ids = [];
       result.hits.hits.forEach(function(hit){ ids.push(hit._id); });
-      fbSearchResponse.child( snap.key() ).set( ids );
+      fbSearchResponse.child( snap.key() ).set({ ids: ids });
     }
   });
 }
