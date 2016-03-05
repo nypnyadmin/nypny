@@ -5,6 +5,7 @@
 var baseRef = new Firebase('https://nypny.firebaseio.com');
 var usersRef = baseRef.child('users');
 var feedbackRef = baseRef.child('feedbacks');
+var totalUsersRef = baseRef.child('stats/totalUsers')
 var auth;
 
 
@@ -89,7 +90,7 @@ function loadInitialData(authData) {
 
 // Copy profile when new user is created.
 function updateNewUserInfo(authData) {
-  userData = {};
+  userData = { name: '' };
   switch(authData.provider) {
     case 'facebook':
       $.extend(userData, {
@@ -115,6 +116,9 @@ function updateNewUserInfo(authData) {
   myRef.set(userData, function(error) {
     if (error) { boxAlert(error.message, true); }
     else boxAlert('Welcome to NYPNY!');
+    totalUsersRef.transaction(function (current_value) {
+      return (current_value || 0) + 1;
+    });
   });
 }
 
@@ -301,8 +305,11 @@ var refreshRef = function() {
 }
 baseRef.onAuth(refreshRef);
 
+totalUsersRef.once('value', function(snap){
+  $('[data-container="total-users"]').html(snap.val());
+});
+
 // ****** Search
-// 
 // 
 function fetchAndLoadSearchMember(id) {
   usersRef.child(id).once('value', function(snap) {
