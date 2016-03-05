@@ -58,7 +58,7 @@ function processSearchRequest(snap) {
     index: indexName,
     type: 'document',
     from: 0,
-    size: 100,
+    size: 12,
     body: { query: { query_string: { query: snap.val().query } } }
   }, function(error, result) {
     if (error) {
