@@ -334,7 +334,10 @@ function searchMembers(q) {
 }
 
 // search enter 3 seconds buffer
+var searchedQ;
 var onEnterSearchQuery = function(q) {
+  if (searchedQ == q) return; searchedQ = q;
+
   if (q.length >= 3) {
     recentMembersContainer.addClass('hidden');
     searchMembersContainer.removeClass('hidden');

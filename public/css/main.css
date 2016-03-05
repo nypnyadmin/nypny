@@ -191,7 +191,7 @@ section.about .objective .text {
 
 section.directory {
     padding: 70px 0 40px 0;
-    background-color: #D4D4D4;
+    background-color: #EBEBEB;
     /* font-weight: bold; */
 }
 section.directory>.members-container>.title {
@@ -216,15 +216,16 @@ section.directory .members .spinner {
     color: #4083C4;
 }
 section.directory .member {
-    width: 340px;
-    margin: 5px;
+    margin: 15px;
     display: inline-block;
     vertical-align: top;
-    /* height: 420px; */
+    position: relative;
+    width: 250px;
+    height: 270px;
 }
 section.directory .member .picture {
-    width: 140px;
-    height: 140px;
+    width: 175px;
+    height: 175px;
     background-size: cover;
     /* border-radius: 100px; */
     background-position: center center;
@@ -241,24 +242,26 @@ section.directory .member .texts hr {
     margin: 10px 0;
 }
 section.directory .member .texts {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.52);
     font-size: 0.9em;
     text-align: left;
-    padding: 15px;
-    box-shadow: 2px 2px 8px #000;
+    padding: 20px 0 0 0;
+    /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.24); */
+    width: 100%;
+    height: 100%;
 }
-section.directory .member .name {font-size: 1.1em;font-weight: bold;}
+section.directory .member .name {font-size: 1.2em;font-weight: bold;text-align: center;}
 
-section.directory .member .title {
-}
-section.directory .member .skills {font-weight: bold;font-size: .9em;margin-bottom: 9px;}
-section.directory .member .email {font-weight: bold;}
-section.directory .member .phone {font-weight: bold;}
+section.directory .member .title {text-align: center;/* font-size: .9em; *//* font-weight: bold; */color: #727272;}
+section.directory .member .skills {font-weight: bold;font-size: .9em;/* margin-bottom: 9px; */}
+section.directory .member .email {font-weight: bold;font-size: .9em;}
+section.directory .member .phone {font-weight: bold;font-size: .9em;}
 section.directory .member .address {
     font-weight: bold;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-size: .9em;
 }
 
 section.directory .member .contact-icon {
@@ -273,8 +276,37 @@ section.directory .member .link {
 section.directory .member .linkedin {
     background: #1B86BC;
 }
-section.directory .member .bio {margin-bottom: 10px;font-size: .8em;}
-section.directory .member .locked { height: 30px; }
+section.directory .member hr {
+	margin-top: 15px;
+}
+section.directory .member .bio {
+	font-size: .9em;
+	position: absolute;
+	padding: 8px 10px;
+	border-top: 1px solid #C8C8C8;
+	margin: 20px 0 0 0;
+	background: #F2F2F2;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	font-family: monospace;
+}
+section.directory .member .locked,
+section.directory .member .unlocked {
+	opacity: 0;
+	font-size: .9em;
+	transition: opacity .1s ease-in-out;
+}
+section.directory .member:hover .locked,
+section.directory .member:hover .unlocked {
+	opacity: 1;
+}
+
+section.directory .member .locked {
+	text-align: center;
+	font-size: 1.1em;
+	padding: 80px 40px;
+}
 section.directory .member .locked .fa-lock{
     font-size: 2em;
     margin: 5px 15px 5px 5px;
@@ -309,6 +341,9 @@ section.social .fa.fa-tumblr {
 }
 section.social .fa.fa-twitter {
     background-color: #2CAAE1;
+}
+section.social .fa.fa-linkedin {
+    background: #1B86BC;
 }
 
 
@@ -369,7 +404,7 @@ section.footer .copyright {
     background: #000;
     border-radius: 20px;
     color: white;
-    margin: 2px 3px;
+    margin: 2px 0px 2px 6px;
 }
 .circled-icon:hover {
     color: white;
@@ -393,4 +428,49 @@ section.footer .copyright {
 
 .profile-picture-uploader {
     margin-bottom: 15px;
+}
+
+
+// Arrow box
+
+.arrow_box {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #d9d9d9;
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 10%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #F2F2F2;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow_box:before {
+	border-color: rgba(217, 217, 217, 0);
+	border-bottom-color: #C8C8C8;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+.hover-cover {
+	position: absolute;
+	width: 110%;
+	height: 110%;
+	top: -5%;
+	left: -5%;
+	padding: 20px;
+	background-color: rgb(246, 246, 246);
+	color: black;
+	text-align: left;
+	border: 1px solid #E0E0E0;
 }
