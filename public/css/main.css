@@ -263,6 +263,10 @@ section.directory .member .address {
     font-size: .9em;
 }
 
+section.divider {
+    padding: 20px;
+}
+
 section.directory .member .contact-icon {
     margin-right: 8px;
     font-size: 1.3em;
